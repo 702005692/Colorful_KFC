@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function isThursday(){
-        return new Date().getDay() === 0; //判断是否是周四
+        return new Date().getDay() === 4; //判断是否是周四
     }
     
     // 发送按钮点击事件
