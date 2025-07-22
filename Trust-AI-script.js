@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const video = document.createElement('video');
         video.className = 'video_player';
-        video.controls = true;
+        //video.controls = true; 关闭视频控件
         video.autoplay = true;
         video.style.maxWidth = `${maxVideoWidth}px`;
         video.style.maxHeight = `${maxVideoHeight}px`;
