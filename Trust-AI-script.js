@@ -1,13 +1,18 @@
+import {loadAndPlayAnimation} from "./script/Think_Status.js"
+import {RandomTime} from "./script/Random_Time.js"
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatMessages = document.getElementById('chat-messages');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
 
 
-    function sendMessage() {
+    async function sendMessage() {
+        await checkVideoExist()
+
+        await loadAndPlayAnimation("chat-messages","./Resource/thonking.json", RandomTime()*1000)
 
         if (isThursday()){
-            checkVideoExist()
             insertText()
             insertVideoToChat()
             const response = getAIResponse('Secret DAY!')
